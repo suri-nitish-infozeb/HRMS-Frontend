@@ -1,0 +1,16 @@
+.page {
+  max-width: 600px;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 12px;
+}
+
+.desc {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  margin: 0;
+}

@@ -1,0 +1,50 @@
+:root {
+  /* Dark theme - HRMS.ai */
+  --color-primary: #4266f6;
+  --color-primary-hover: #5b7cff;
+  --color-primary-light: #282a3a;
+  --color-primary-light-hover: #32344a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-muted: #c0c0c0;
+  --color-border: #2a2b38;
+  --color-border-light: #252630;
+  --color-bg: #0e0e14;
+  --color-bg-subtle: #1f202b;
+  --color-bg-sidebar: #111118;
+  --color-notification-dot: #e53e3e;
+
+  /* Sidebar active state */
+  --color-sidebar-active-bg: #282a3a;
+  --color-sidebar-active-border: rgba(66, 102, 246, 0.4);
+
+  /* Logo */
+  --color-logo-icon-bg: #1e2240;
+  --color-logo-icon-text: #5b7cff;
+  --color-logo-text: #ffffff;
+  --color-logo-accent: #5b7cff;
+
+  /* Placeholder / hint (light blue-cyan) */
+  --color-hint: #8ba3c7;
+
+  /* Layout */
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 64px;
+  --header-height: 64px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
