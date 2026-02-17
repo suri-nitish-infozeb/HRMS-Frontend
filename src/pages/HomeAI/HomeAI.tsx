@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Calculator, Briefcase, BarChart2 } from 'lucide-react';
 import { useAppSelector } from '../../hooks';
-import { CopilotInput, QuickActions } from '../../components';
+import { CopilotInput, QuickActions, Loader, AttritionChart } from '../../components';
 import type { QuickActionItem } from '../../components';
+import type { AttritionData } from '../../components';
+import attritionData from '../../data/employeeAttrition.json';
 import styles from './HomeAI.module.css';
 
 const QUICK_ACTIONS: QuickActionItem[] = [
@@ -30,6 +32,8 @@ const QUICK_ACTIONS: QuickActionItem[] = [
   },
 ];
 
+const GRAPH_LOAD_DELAY_MS = 1800;
+
 function getGreetingPhrase(userName: string): string {
   const hour = new Date().getHours();
   const timeGreeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
@@ -51,6 +55,20 @@ function HomeAI() {
   const user = useAppSelector((state) => state.user);
   const phrase1 = getGreetingPhrase(user.name);
   const [displayText, setDisplayText] = useState('');
+  const [hasAsked, setHasAsked] = useState(false);
+  const [graphLoaded, setGraphLoaded] = useState(false);
+
+  const handleAsk = useCallback((value: string) => {
+    if (!value.trim()) return;
+    setHasAsked(true);
+    setGraphLoaded(false);
+  }, []);
+
+  useEffect(() => {
+    if (!hasAsked) return;
+    const id = setTimeout(() => setGraphLoaded(true), GRAPH_LOAD_DELAY_MS);
+    return () => clearTimeout(id);
+  }, [hasAsked]);
 
   useEffect(() => {
     let cancelled = false;
@@ -93,21 +111,37 @@ function HomeAI() {
   }, [phrase1]);
 
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} ${hasAsked ? styles.pageResults : ''}`}>
       <div className={styles.centerBlock}>
         <h1 className={styles.greeting}>
           {displayText}
           <span className={styles.cursor} aria-hidden />
         </h1>
-        <CopilotInput
-          onAsk={(value) => {
-            console.log('Ask Copilot:', value);
-          }}
-        />
-        <div className={styles.quickActions}>
-          <QuickActions actions={QUICK_ACTIONS} />
-        </div>
+
+        {!hasAsked && (
+          <>
+            <CopilotInput onAsk={handleAsk} />
+            <div className={styles.quickActions}>
+              <QuickActions actions={QUICK_ACTIONS} />
+            </div>
+          </>
+        )}
       </div>
+
+      {hasAsked && (
+        <>
+          <div className={styles.canvas}>
+            {!graphLoaded ? (
+              <Loader />
+            ) : (
+              <AttritionChart data={attritionData as AttritionData} />
+            )}
+          </div>
+          <div className={styles.inputBottom}>
+            <CopilotInput onAsk={handleAsk} />
+          </div>
+        </>
+      )}
     </div>
   );
 }
