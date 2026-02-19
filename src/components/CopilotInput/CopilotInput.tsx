@@ -19,7 +19,10 @@ function CopilotInput({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onAsk?.(value);
+    if (!value.trim()) return; // Khali message na jaye
+
+    onAsk?.(value); // Parent (HomeAI) ko value bhejo
+    setValue('');   // ✅ YAHAN MAGIC HAI: Input ko turant khali kar diya
   };
 
   return (
@@ -39,11 +42,13 @@ function CopilotInput({
         <button type="button" className={styles.micButton} aria-label="Voice input">
           <Mic size={20} strokeWidth={1.8} />
         </button>
-        <button type="submit" className={styles.button}>
+        <button type="submit" className={styles.button} disabled={!value.trim()}>
           {buttonLabel}
         </button>
       </form>
-      {suggestedActions.length > 0 && (
+      
+      {/* Suggestions sirf tab dikhao jab value khali ho (Professional look) */}
+      {value === '' && suggestedActions.length > 0 && (
         <p className={styles.suggestions}>
           {suggestedActions.map((text, i) => (
             <span key={i}>{text}</span>

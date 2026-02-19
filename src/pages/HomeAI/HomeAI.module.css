@@ -1,102 +1,213 @@
+/* --- 1. CORE LAYOUT (Authentic Structure) --- */
 .page {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  min-height: calc(100vh - var(--header-height) - 48px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: stretch;
-  transition: justify-content 0.4s ease;
+width: 100%;
+max-width: 960px;
+margin: 0 auto;
+min-height: calc(100vh - 48px);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: stretch;
+background-color: #0d0d0d;
 }
 
 .pageResults {
-  justify-content: flex-start;
-  min-height: calc(100vh - var(--header-height) - 48px);
-  padding-bottom: 100px;
+justify-content: flex-start;
+padding-bottom: 140px; /* Space for fixed input */
 }
 
 .centerBlock {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  transition: opacity 0.3s ease;
+display: flex;
+flex-direction: column;
+align-items: stretch;
+width: 100%;
 }
 
 .greeting {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-  margin: 0 0 24px;
-  line-height: 1.2;
-  text-align: center;
-}
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 1em;
-  margin-left: 2px;
-  background: var(--color-primary);
-  animation: blink 0.8s step-end infinite;
-  vertical-align: -0.15em;
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
-.quickActions {
-  margin-top: 32px;
-  transition: opacity 0.3s ease;
+font-size: 2.5rem;
+font-weight: 700;
+color: #ffffff;
+margin-bottom: 24px;
+text-align: center;
 }
 
 .canvas {
-  flex: 1;
-  min-height: 320px;
-  margin-top: 24px;
-  padding: 20px;
-  background: rgba(24, 27, 36, 0.4);
-  border-radius: 12px;
-  border: 1px solid rgba(107, 158, 255, 0.15);
-  animation: canvasIn 0.4s ease-out;
+flex: 1;
+min-height: 400px;
+margin-top: 24px;
+padding: 24px;
+background: rgba(24, 27, 36, 0.4);
+border-radius: 16px;
+border: 1px solid rgba(107, 158, 255, 0.15);
+overflow-y: auto;
 }
 
-@keyframes canvasIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
+/* Fixed Bottom Input */
 .inputBottom {
-  position: fixed;
-  bottom: 0;
-  left: var(--sidebar-width);
-  right: 0;
-  padding: 16px 24px 24px;
-  background: linear-gradient(to top, var(--color-bg) 60%, transparent);
-  animation: inputSlideUp 0.4s ease-out;
-}
-
-@keyframes inputSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+padding: 30px 24px;
+background: linear-gradient(to top, #0d0d0d 80%, transparent);
+z-index: 10;
 }
 
 .inputBottom > * {
-  max-width: 960px;
-  margin: 0 auto;
+max-width: 800px;
+margin: 0 auto;
+}
+
+/* --- 2. CHAT BUBBLES & ALIGNMENT --- */
+.scrollArea {
+display: flex;
+flex-direction: column;
+gap: 25px;
+}
+
+.messageRow {
+display: flex;
+gap: 12px;
+max-width: 85%;
+animation: fadeIn 0.3s ease-out;
+}
+
+.userRow {
+align-self: flex-end;
+flex-direction: row-reverse;
+}
+
+.assistantRow {
+align-self: flex-start;
+}
+
+.bubble {
+padding: 14px 18px;
+border-radius: 18px;
+font-size: 14.5px;
+line-height: 1.6;
+}
+
+.userRow .bubble {
+background-color: #2563eb;
+color: white;
+border-bottom-right-radius: 4px;
+}
+
+.assistantRow .bubble {
+background-color: #1e1e1e;
+color: #e5e5e5;
+border: 1px solid #333;
+border-bottom-left-radius: 4px;
+}
+
+/* --- 3. INTERACTIVE LISTS WITH NUMBERS --- */
+.markdownContent {
+counter-reset: assistant-counter; /* Initialize Counter */
+}
+
+.interactiveListItem {
+background: rgba(255, 255, 255, 0.03);
+border: 1px solid rgba(255, 255, 255, 0.08);
+padding: 12px 16px;
+border-radius: 12px;
+margin-top: 10px;
+display: flex;
+align-items: flex-start;
+gap: 12px;
+transition: all 0.2s ease;
+counter-increment: assistant-counter; /* Increment Number */
+}
+
+.interactiveListItem:hover {
+background: rgba(96, 165, 250, 0.08);
+transform: translateX(5px);
+border-color: rgba(96, 165, 250, 0.3);
+}
+
+/* Number Circle Styling */
+.listNumber::before {
+content: counter(assistant-counter);
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 22px;
+height: 22px;
+background: #2563eb;
+color: white;
+font-size: 11px;
+font-weight: 800;
+border-radius: 50%;
+box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+.listText {
+flex: 1;
+}
+
+/* --- 4. ACTION BUTTONS (Links) --- */
+.chatLink {
+background: rgba(96, 165, 250, 0.1);
+color: #60a5fa !important;
+padding: 8px 16px;
+border-radius: 10px;
+font-weight: 600;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+border: 1px solid rgba(96, 165, 250, 0.2);
+margin-top: 12px;
+width: fit-content;
+transition: 0.3s;
+}
+
+.chatLink:hover {
+background: #2563eb;
+color: white !important;
+transform: translateY(-2px);
+}
+
+/* Highlight Text */
+.highlightText {
+color: #60a5fa;
+font-weight: 700;
+background: rgba(96, 165, 250, 0.1);
+padding: 2px 6px;
+border-radius: 4px;
+}
+
+/* Header with Glow */
+.assistantTitle {
+font-size: 10px;
+font-weight: 800;
+color: #60a5fa;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 10px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+
+.assistantTitle::after {
+content: '';
+height: 1px;
+flex: 1;
+background: linear-gradient(to right, rgba(96, 165, 250, 0.5), transparent);
+}
+
+.avatar {
+width: 34px;
+height: 34px;
+background: #262626;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 1px solid #333;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(5px); }
+to { opacity: 1; transform: translateY(0); }
 }
