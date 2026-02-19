@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Calculator, Briefcase, BarChart2 } from 'lucide-react';
 import { useAppSelector } from '../../hooks';
-import { CopilotInput, QuickActions, Loader, AttritionChart } from '../../components';
+import { CopilotInput, QuickActions, Loader, JobDescriptionsTable } from '../../components';
 import type { QuickActionItem } from '../../components';
-import type { AttritionData } from '../../components';
-import attritionData from '../../data/employeeAttrition.json';
+import { fetchJobDescriptions } from '../../services/api';
+import type { JobDescriptionRow } from '../../services/api';
 import styles from './HomeAI.module.css';
 
 const QUICK_ACTIONS: QuickActionItem[] = [
@@ -32,8 +32,6 @@ const QUICK_ACTIONS: QuickActionItem[] = [
   },
 ];
 
-const GRAPH_LOAD_DELAY_MS = 1800;
-
 function getGreetingPhrase(userName: string): string {
   const hour = new Date().getHours();
   const timeGreeting = hour < 12 ? 'Good Morning' : hour < 18 ? 'Good Afternoon' : 'Good Evening';
@@ -56,19 +54,31 @@ function HomeAI() {
   const phrase1 = getGreetingPhrase(user.name);
   const [displayText, setDisplayText] = useState('');
   const [hasAsked, setHasAsked] = useState(false);
-  const [graphLoaded, setGraphLoaded] = useState(false);
+  const [jobData, setJobData] = useState<JobDescriptionRow[] | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+  const fetchJobs = useCallback(() => {
+    setHasAsked(true);
+    setLoading(true);
+    setLoadError(null);
+    setJobData(null);
+    fetchJobDescriptions()
+      .then((rows) => {
+        setJobData(rows);
+        setLoading(false);
+      })
+      .catch((e) => {
+        setLoadError(e instanceof Error ? e.message : 'Failed to load');
+        setJobData([]);
+        setLoading(false);
+      });
+  }, []);
 
   const handleAsk = useCallback((value: string) => {
     if (!value.trim()) return;
-    setHasAsked(true);
-    setGraphLoaded(false);
-  }, []);
-
-  useEffect(() => {
-    if (!hasAsked) return;
-    const id = setTimeout(() => setGraphLoaded(true), GRAPH_LOAD_DELAY_MS);
-    return () => clearTimeout(id);
-  }, [hasAsked]);
+    fetchJobs();
+  }, [fetchJobs]);
 
   useEffect(() => {
     let cancelled = false;
@@ -131,10 +141,17 @@ function HomeAI() {
       {hasAsked && (
         <>
           <div className={styles.canvas}>
-            {!graphLoaded ? (
+            {loading ? (
               <Loader />
+            ) : loadError ? (
+              <div className={styles.error}>
+                <p className={styles.errorText}>{loadError}</p>
+                <button type="button" className={styles.retryButton} onClick={fetchJobs}>
+                  Retry
+                </button>
+              </div>
             ) : (
-              <AttritionChart data={attritionData as AttritionData} />
+              <JobDescriptionsTable data={jobData ?? []} />
             )}
           </div>
           <div className={styles.inputBottom}>

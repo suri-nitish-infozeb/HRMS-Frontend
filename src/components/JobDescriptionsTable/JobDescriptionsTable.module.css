@@ -1,0 +1,75 @@
+.card {
+  background: #181b24;
+  border-radius: 10px;
+  padding: 24px;
+  width: 100%;
+  min-height: 0;
+  flex: 1;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+.wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.th {
+  text-align: left;
+  padding: 12px 16px;
+  color: #9ca3af;
+  font-weight: var(--font-medium);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+.tr {
+  transition: background 0.15s;
+}
+
+.tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.td {
+  padding: 12px 16px;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: 320px;
+}
+
+.td:last-child {
+  max-width: none;
+}
+
+.tr:last-child .td {
+  border-bottom: none;
+}
+
+.empty {
+  color: #9ca3af;
+  margin: 0;
+  font-size: var(--text-sm);
+}
