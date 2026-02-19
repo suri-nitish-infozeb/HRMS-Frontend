@@ -1,7 +1,2711 @@
-{
-  "title": "Employee Attrition by Department",
-  "subtitle": "Annual attrition rate (%)",
-  "categories": ["Engineering", "Sales", "Marketing", "HR", "Operations", "Support"],
-  "values": [12, 18, 15, 8, 11, 22],
-  "unit": "%"
-}
+[
+  {
+    "id": 1,
+    "name": "Manish Goel",
+    "gender": "Male",
+    "email": "manish.goel@company.com",
+    "designation": "Cybersecurity",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "T001",
+            "title": "Security Audit",
+            "description": "Audited payment gateway API for vulnerabilities.",
+            "time_spent": "4.5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T002",
+            "title": "Team Sync",
+            "description": "Weekly security briefing.",
+            "time_spent": "1 hour",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T003",
+            "title": "Firewall Update",
+            "description": "Patched edge firewall rules.",
+            "time_spent": "3.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:15 AM",
+        "punch_out": "06:15 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "T004",
+            "title": "Pen-Testing",
+            "description": "Simulated DDoS attack on staging environment.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T005",
+            "title": "Log Analysis",
+            "description": "Reviewed SIEM logs for suspicious activity.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:45 AM",
+        "punch_out": "05:45 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "T006",
+            "title": "Incident Response",
+            "description": "Investigated phishing report from HR.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T007",
+            "title": "Policy Review",
+            "description": "Updated MFA requirements.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "T008",
+            "title": "Vulnerability Scan",
+            "description": "Ran Nessus scan on production servers.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T009",
+            "title": "Reporting",
+            "description": "Drafted remediation plan.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8.5,
+        "tasks": [
+          {
+            "task_id": "T010",
+            "title": "Security Awareness",
+            "description": "Prepared deck for company-wide training.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "T011",
+            "title": "Backups",
+            "description": "Verified encryption of off-site backups.",
+            "time_spent": "4.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Kavita Reddy",
+    "gender": "Female",
+    "email": "kavita.reddy@company.com",
+    "designation": "Legal Counsel",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "L001",
+            "title": "Vendor Redlining",
+            "description": "Revised MSA for cloud provider.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "L002",
+            "title": "IP Meeting",
+            "description": "Discussed patent filing strategy.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "L003",
+            "title": "Privacy Audit",
+            "description": "Checked GDPR compliance for user data.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "L004",
+            "title": "NDA Prep",
+            "description": "Drafted NDAs for new partners.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:30 AM",
+        "punch_out": "04:30 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "L005",
+            "title": "Litigation Support",
+            "description": "Consulted with external counsel on case X.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "L006",
+            "title": "Contract Filing",
+            "description": "Digitized signed agreements.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "L007",
+            "title": "Board Prep",
+            "description": "Legal briefing for quarterly board meet.",
+            "time_spent": "8 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "L008",
+            "title": "Labor Law",
+            "description": "Updated remote work policy clauses.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "L009",
+            "title": "Trademark Check",
+            "description": "Cleared new product names with registry.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Arjun Sharma",
+    "gender": "Male",
+    "email": "arjun.sharma@company.com",
+    "designation": "Frontend Developer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "F001",
+            "title": "Bug Fixing",
+            "description": "Resolved navbar alignment on Safari.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "F002",
+            "title": "Code Review",
+            "description": "Reviewed PRs for landing page.",
+            "time_spent": "4 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "F003",
+            "title": "Feature Build",
+            "description": "Implemented dark mode toggle.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "F004",
+            "title": "Standup",
+            "description": "Daily dev sync.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "F005",
+            "title": "API Integration",
+            "description": "Connected login page to Auth service.",
+            "time_spent": "9 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "F006",
+            "title": "Optimization",
+            "description": "Reduced bundle size using code splitting.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "F007",
+            "title": "Testing",
+            "description": "Wrote Jest tests for input forms.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "F008",
+            "title": "Deployment",
+            "description": "Pushed v2.4 to production.",
+            "time_spent": "4 hours",
+            "status": "In Progress"
+          },
+          {
+            "task_id": "F009",
+            "title": "Documentation",
+            "description": "Updated component library docs.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sana Khan",
+    "gender": "Female",
+    "email": "sana.khan@company.com",
+    "designation": "HR Manager",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8.5,
+        "tasks": [
+          {
+            "task_id": "H001",
+            "title": "Recruitment",
+            "description": "Screened 50 resumes for Sales.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "H002",
+            "title": "Employee Query",
+            "description": "Resolved medical insurance issues.",
+            "time_spent": "3.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8.5,
+        "tasks": [
+          {
+            "task_id": "H003",
+            "title": "Interview",
+            "description": "L2 interview for Product Designer.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "H004",
+            "title": "Policy Talk",
+            "description": "Drafted POSH awareness email.",
+            "time_spent": "4.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8.5,
+        "tasks": [
+          {
+            "task_id": "H005",
+            "title": "Payroll",
+            "description": "Verified attendance for Feb payroll.",
+            "time_spent": "8.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8.5,
+        "tasks": [
+          {
+            "task_id": "H006",
+            "title": "Onboarding",
+            "description": "New joiner induction session.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "H007",
+            "title": "Exit Interview",
+            "description": "Conducted exit talk with departing staff.",
+            "time_spent": "4.5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "H008",
+            "title": "Engagement",
+            "description": "Planned Friday Fun activity.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "H009",
+            "title": "Appraisal",
+            "description": "Prepared performance review sheets.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "David Miller",
+    "gender": "Male",
+    "email": "david.miller@company.com",
+    "designation": "Data Analyst",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "D001",
+            "title": "Sales Cleaning",
+            "description": "Deduplicated Q4 sales records.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "D002",
+            "title": "Meeting",
+            "description": "Data requirements gathering.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "D003",
+            "title": "Dashboard",
+            "description": "Built PowerBI revenue dashboard.",
+            "time_spent": "9 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "D004",
+            "title": "SQL Tuning",
+            "description": "Optimized joins for faster queries.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "D005",
+            "title": "Forecasting",
+            "description": "Ran linear regression for Mar sales.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "D006",
+            "title": "Ad-hoc Report",
+            "description": "Calculated churn rate for Marketing.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "D007",
+            "title": "Audit",
+            "description": "Validated source data accuracy.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "08:30 AM",
+        "punch_out": "04:30 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "D008",
+            "title": "Presentation",
+            "description": "Shared insights with management.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "D009",
+            "title": "Pipeline",
+            "description": "Updated Python automation scripts.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Priya Nair",
+    "gender": "Female",
+    "email": "priya.nair@company.com",
+    "designation": "UI/UX Designer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "X001",
+            "title": "Wireframing",
+            "description": "User flow for checkout process.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "X002",
+            "title": "Moodboard",
+            "description": "Selected color palette for App.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "X003",
+            "title": "High-Fi Design",
+            "description": "Created Figma components for buttons.",
+            "time_spent": "9 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "X004",
+            "title": "User Testing",
+            "description": "A/B testing for landing page icons.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "X005",
+            "title": "Feedback",
+            "description": "Iterated designs based on test results.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "X006",
+            "title": "Dev Handoff",
+            "description": "Exported assets and CSS snippets.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "X007",
+            "title": "Design Sync",
+            "description": "Meeting with Frontend team.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "X008",
+            "title": "Logo Refinement",
+            "description": "Vectorized new brand logo ideas.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "X009",
+            "title": "Admin",
+            "description": "Cleaned up Figma workspace.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Rohan Das",
+    "gender": "Male",
+    "email": "rohan.das@company.com",
+    "designation": "DevOps Engineer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "08:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "V001",
+            "title": "Jenkins Repair",
+            "description": "Fixed broken builds due to plugin error.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "V002",
+            "title": "Cloud Watch",
+            "description": "Configured alerts for CPU spikes.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "08:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "V003",
+            "title": "Terraform",
+            "description": "Provisioned staging DB via IaC.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "V004",
+            "title": "Docker",
+            "description": "Updated base images for Python apps.",
+            "time_spent": "3 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "V005",
+            "title": "K8s Upgrade",
+            "description": "Rolling update to Kubernetes cluster.",
+            "time_spent": "9 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "08:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "V006",
+            "title": "Security",
+            "description": "Implemented IAM role least privilege.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "V007",
+            "title": "Scripting",
+            "description": "Automation for log cleanup.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "V008",
+            "title": "Performance",
+            "description": "Load testing production env.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "V009",
+            "title": "Planning",
+            "description": "Next week's migration roadmap.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Ananya Iyer",
+    "gender": "Female",
+    "email": "ananya.iyer@company.com",
+    "designation": "Content Strategist",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "C001",
+            "title": "Content Audit",
+            "description": "Identified outdated blogs for refresh.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "C002",
+            "title": "Social Media",
+            "description": "Drafted 10 Twitter/X posts.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "C003",
+            "title": "Writing",
+            "description": "Whitepaper on AI in Finance.",
+            "time_spent": "9 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "C004",
+            "title": "SEO",
+            "description": "Keyword mapping for Q1 articles.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "C005",
+            "title": "Meeting",
+            "description": "Collaborated with Video team.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "C006",
+            "title": "Copywriting",
+            "description": "New website hero section copy.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "C007",
+            "title": "Newsletter",
+            "description": "Compiled bi-weekly updates.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "C008",
+            "title": "PR Draft",
+            "description": "Press release for funding round.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "C009",
+            "title": "Review",
+            "description": "Approved freelance writer drafts.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "James Bond",
+    "gender": "Male",
+    "email": "james.bond@company.com",
+    "designation": "Account Manager",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "A001",
+            "title": "Client Call",
+            "description": "Renewal talk with Enterprise client.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "A002",
+            "title": "CRM Entry",
+            "description": "Updated pipeline in Salesforce.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "A003",
+            "title": "Proposal",
+            "description": "Upsell deck for TechCorp.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "A004",
+            "title": "Support Liaison",
+            "description": "Followed up on open tickets.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "A005",
+            "title": "Onboarding",
+            "description": "Kickoff meeting with 2 new accounts.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "A006",
+            "title": "Strategy",
+            "description": "Account growth planning.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "A007",
+            "title": "Reporting",
+            "description": "Quarterly business review (QBR) prep.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "A008",
+            "title": "Email Blast",
+            "description": "Feature update announcement.",
+            "time_spent": "1 hour",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "A009",
+            "title": "Feedback",
+            "description": "NPS survey collection.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "A010",
+            "title": "Team Meet",
+            "description": "Sales/Support sync.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Sarah Jenkins",
+    "gender": "Female",
+    "email": "sarah.jenkins@company.com",
+    "designation": "Product Manager",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "08:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 10,
+        "tasks": [
+          {
+            "task_id": "P001",
+            "title": "Roadmap",
+            "description": "Prioritized features for Sprint 12.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "P002",
+            "title": "User Research",
+            "description": "Analyzed heatmaps from Hotjar.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "08:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 10,
+        "tasks": [
+          {
+            "task_id": "P003",
+            "title": "Stakeholders",
+            "description": "Budget meeting with Finance.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "P004",
+            "title": "PRD",
+            "description": "Wrote specs for Mobile Wallet.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 10,
+        "tasks": [
+          {
+            "task_id": "P005",
+            "title": "Competitive Analysis",
+            "description": "Audited competitor app updates.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "P006",
+            "title": "Dev Sync",
+            "description": "Clarified technical constraints.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "08:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 10,
+        "tasks": [
+          {
+            "task_id": "P007",
+            "title": "GTM Plan",
+            "description": "Planned launch with Marketing.",
+            "time_spent": "10 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "P008",
+            "title": "Analytics",
+            "description": "Reviewed KPIs on Mixpanel.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "P009",
+            "title": "Retrospective",
+            "description": "Project wrap-up session.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Vikram Singh",
+    "gender": "Male",
+    "email": "vikram.singh@company.com",
+    "designation": "Backend Engineer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "B001",
+            "title": "API Build",
+            "description": "Created CRUD for User Profiles.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "B002",
+            "title": "DB Sync",
+            "description": "Resolved Postgres lock issue.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "B003",
+            "title": "Redis Integration",
+            "description": "Implemented session caching.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "B004",
+            "title": "Refactoring",
+            "description": "Cleaned up legacy auth code.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "B005",
+            "title": "ElasticSearch",
+            "description": "Indexed product catalogs.",
+            "time_spent": "9 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "10:00 AM",
+        "punch_out": "07:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "B006",
+            "title": "Worker Service",
+            "description": "Setup BullMQ for mail queues.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "B007",
+            "title": "Logging",
+            "description": "Integrated Winston for better trace.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "B008",
+            "title": "Security Patches",
+            "description": "Updated npm dependencies.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "B009",
+            "title": "API Docs",
+            "description": "Swagger documentation update.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Emily Watson",
+    "gender": "Female",
+    "email": "emily.watson@company.com",
+    "designation": "Marketing Lead",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "M001",
+            "title": "Meta Ads",
+            "description": "Optimized budget for Video ads.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "M002",
+            "title": "PR Review",
+            "description": "Approved press release deck.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "M003",
+            "title": "Event Planning",
+            "description": "Webinar guest coordination.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "M004",
+            "title": "SEO Sync",
+            "description": "Reviewing organic traffic drop.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "M005",
+            "title": "Brand Guidelines",
+            "description": "Updated typography standards.",
+            "time_spent": "8 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "M006",
+            "title": "Influencers",
+            "description": "Signed 3 new influencers.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "M007",
+            "title": "Email",
+            "description": "Re-engagement campaign launch.",
+            "time_spent": "3 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "M008",
+            "title": "Reporting",
+            "description": "Weekly lead attribution report.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "M009",
+            "title": "Retreat",
+            "description": "Team bonding logistics.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Rajiv Mehta",
+    "gender": "Male",
+    "email": "rajiv.mehta@company.com",
+    "designation": "Finance Analyst",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "N001",
+            "title": "Audit",
+            "description": "Cross-verified Q4 receipts.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "N002",
+            "title": "ERP",
+            "description": "Data entry for vendor bills.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "N003",
+            "title": "Tax",
+            "description": "GST reconciliation for Jan.",
+            "time_spent": "9 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "N004",
+            "title": "Budgeting",
+            "description": "Drafted Mar department budgets.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "N005",
+            "title": "Payroll",
+            "description": "Tax deduction calculations.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "N006",
+            "title": "Burn Rate",
+            "description": "Updated monthly cashflow sheet.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "N007",
+            "title": "Stock",
+            "description": "ESOP records update.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "N008",
+            "title": "MIS Report",
+            "description": "Finalized weekly executive summary.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "N009",
+            "title": "Archive",
+            "description": "Organized cloud finance folders.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Linda Thompson",
+    "gender": "Female",
+    "email": "linda.t@company.com",
+    "designation": "QA Engineer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Q001",
+            "title": "Sanity Test",
+            "description": "Verified build #452 for launch.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Q002",
+            "title": "Bug Report",
+            "description": "Logged 5 high-priority UI issues.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Q003",
+            "title": "Automation",
+            "description": "Wrote Cypress scripts for Cart.",
+            "time_spent": "8 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Q004",
+            "title": "Mobile Test",
+            "description": "Tested Android APK on Pixel 7.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Q005",
+            "title": "API Test",
+            "description": "Postman collections for Auth.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Q006",
+            "title": "Load Test",
+            "description": "Ran JMeter for 10k users.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Q007",
+            "title": "Triage",
+            "description": "Meeting with Devs on bugs.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Q008",
+            "title": "Regression",
+            "description": "Full app check before weekend.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Q009",
+            "title": "Docs",
+            "description": "Updated Test Plan v3.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Omar Farooq",
+    "gender": "Male",
+    "email": "omar.f@company.com",
+    "designation": "System Administrator",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "S001",
+            "title": "Hardware",
+            "description": "Installed new RAM in Server Room.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "S002",
+            "title": "Accounts",
+            "description": "Reset passwords for 10 users.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "S003",
+            "title": "OS Update",
+            "description": "Patching Windows Server 2022.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "S004",
+            "title": "Inventory",
+            "description": "Tagged new laptops.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "S005",
+            "title": "VPN",
+            "description": "Resolved connectivity for HR team.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "S006",
+            "title": "Printer",
+            "description": "Fixed duplex printing error.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "S007",
+            "title": "Backup",
+            "description": "Full NAS backup verification.",
+            "time_spent": "8 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "08:00 AM",
+        "punch_out": "04:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "S008",
+            "title": "Office 365",
+            "description": "Configured shared mailboxes.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "S009",
+            "title": "Clean-up",
+            "description": "Cable management in server rack.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sonia Gupta",
+    "gender": "Female",
+    "email": "sonia.g@company.com",
+    "designation": "Business Development",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "W001",
+            "title": "Prospecting",
+            "description": "Found 20 leads on LinkedIn.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "W002",
+            "title": "Outreach",
+            "description": "Sent 50 cold emails.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "W003",
+            "title": "Pitch",
+            "description": "Loom video for potential partner.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "W004",
+            "title": "Research",
+            "description": "Competitor pricing analysis.",
+            "time_spent": "3 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "W005",
+            "title": "Demo",
+            "description": "Product demo for GlobalRetail.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "W006",
+            "title": "Follow-up",
+            "description": "Called 10 warm leads.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:30 AM",
+        "punch_out": "06:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "W007",
+            "title": "Negotiation",
+            "description": "Price discussion with Lead X.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "W008",
+            "title": "Deck",
+            "description": "Updated sales deck v4.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "W009",
+            "title": "Closing",
+            "description": "Signed service agreement for SMB.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "W010",
+            "title": "Forecast",
+            "description": "Revenue prediction for Mar.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Kevin Peterson",
+    "gender": "Male",
+    "email": "kevin.p@company.com",
+    "designation": "Support Engineer",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "U001",
+            "title": "Live Chat",
+            "description": "Answered 40 customer chats.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "U002",
+            "title": "Escalation",
+            "description": "Passed 3 bugs to Dev team.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "U003",
+            "title": "KB Article",
+            "description": "Wrote guide on Password Reset.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "U004",
+            "title": "Email",
+            "description": "Replied to 20 help desk tickets.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "U005",
+            "title": "Zoom Support",
+            "description": "Screen-shared with Enterprise user.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "U006",
+            "title": "Internal",
+            "description": "Cleaned up Zendesk labels.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "U007",
+            "title": "Feedback",
+            "description": "Summarized top 5 feature requests.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "U008",
+            "title": "Training",
+            "description": "Watched video on new v2.4 features.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "10:00 AM",
+        "punch_out": "06:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "U009",
+            "title": "Crisis Management",
+            "description": "Handled login outage support.",
+            "time_spent": "8 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Maria Garcia",
+    "gender": "Female",
+    "email": "maria.g@company.com",
+    "designation": "Social Media Manager",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Z001",
+            "title": "Scheduling",
+            "description": "Buffer setup for the week.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Z002",
+            "title": "Design",
+            "description": "Created 5 Canva templates.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Z003",
+            "title": "Engagement",
+            "description": "Replied to 100 Insta comments.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Z004",
+            "title": "Research",
+            "description": "Trending hashtags for Tech.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Z005",
+            "title": "Collaboration",
+            "description": "Meeting with Lead Designer.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Z006",
+            "title": "Video",
+            "description": "Edited 2 Reels for product launch.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Z007",
+            "title": "Paid Social",
+            "description": "Reviewed Facebook ad metrics.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Z008",
+            "title": "Community",
+            "description": "Facebook group moderation.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "Z009",
+            "title": "Reporting",
+            "description": "Weekly growth dashboard update.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "Z010",
+            "title": "Strategy",
+            "description": "Brainstormed Mar viral campaign.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Liam Wilson",
+    "gender": "Male",
+    "email": "liam.w@company.com",
+    "designation": "Project Coordinator",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "J001",
+            "title": "Scrum",
+            "description": "Facilitated morning standup.",
+            "time_spent": "2 hours",
+            "status": "In Progress"
+          },
+          {
+            "task_id": "J002",
+            "title": "Asana Audit",
+            "description": "Cleaned up overdue tasks.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "J003",
+            "title": "Vendor Sync",
+            "description": "Call with hardware suppliers.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "J004",
+            "title": "Resource Plan",
+            "description": "Mapped dev hours for Q2.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "J005",
+            "title": "Risk Log",
+            "description": "Updated project risk registry.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "J006",
+            "title": "Admin",
+            "description": "Expense approvals.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "J007",
+            "title": "Timeline",
+            "description": "Adjusted Gantt chart for delay.",
+            "time_spent": "7 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "J008",
+            "title": "Newsletter",
+            "description": "Project internal update mail.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "08:30 AM",
+        "punch_out": "05:30 PM",
+        "hours_worked": 9,
+        "tasks": [
+          {
+            "task_id": "J009",
+            "title": "Sprint Wrap",
+            "description": "Closed Sprint #11 tickets.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "J010",
+            "title": "Planning",
+            "description": "Pre-planning for Sprint #12.",
+            "time_spent": "4 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Chloe Bennett",
+    "gender": "Female",
+    "email": "chloe.b@company.com",
+    "designation": "Office Administrator",
+    "weekly_report": [
+      {
+        "day": "Monday",
+        "date": "2026-02-09",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "K001",
+            "title": "Pantry",
+            "description": "Restocked coffee and snacks.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "K002",
+            "title": "Couriers",
+            "description": "Sorted incoming mail.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "date": "2026-02-10",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "K003",
+            "title": "Maintenance",
+            "description": "Supervised AC servicing.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "K004",
+            "title": "Stationary",
+            "description": "Ordered pens and notebooks.",
+            "time_spent": "2 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "date": "2026-02-11",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "K005",
+            "title": "Visitor",
+            "description": "Managed reception for VIP guest.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "K006",
+            "title": "Badges",
+            "description": "Issued 5 new ID cards.",
+            "time_spent": "4 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "date": "2026-02-12",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "K007",
+            "title": "Booking",
+            "description": "Room reservations for meetings.",
+            "time_spent": "5 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "K008",
+            "title": "Invoice",
+            "description": "Processed utility bills.",
+            "time_spent": "3 hours",
+            "status": "Completed"
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "date": "2026-02-13",
+        "punch_in": "09:00 AM",
+        "punch_out": "05:00 PM",
+        "hours_worked": 8,
+        "tasks": [
+          {
+            "task_id": "K009",
+            "title": "Event",
+            "description": "Setup for Friday social hour.",
+            "time_spent": "6 hours",
+            "status": "Completed"
+          },
+          {
+            "task_id": "K010",
+            "title": "Files",
+            "description": "Archived old physical records.",
+            "time_spent": "2 hours",
+            "status": "In Progress"
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "date": "2026-02-14",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      },
+      {
+        "day": "Sunday",
+        "date": "2026-02-15",
+        "punch_in": null,
+        "punch_out": null,
+        "hours_worked": 0,
+        "tasks": []
+      }
+    ]
+  }
+]
