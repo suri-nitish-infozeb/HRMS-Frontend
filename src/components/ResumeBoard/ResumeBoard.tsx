@@ -118,11 +118,16 @@ function ResumeBoard({ data }: ResumeBoardProps) {
 
   const columnSlot = (
     <>
-      {data.columns.map((col) => (
-        <div key={col.id} className={styles.column}>
-          <h2 className={styles.columnTitle}>{col.title}</h2>
+      {data.columns.map((col) => {
+        const isEmpty = getResumesForColumn(col.id).length === 0;
+        return (
           <div
-            className={`${styles.cards} ${styles.dropZone} ${dragOverColumnId === col.id ? styles.dropZoneActive : ''}`}
+            key={col.id}
+            className={`${styles.column} ${isEmpty ? styles.columnEmpty : ''}`}
+          >
+            <h2 className={styles.columnTitle}>{col.title}</h2>
+            <div
+              className={`${styles.cards} ${styles.dropZone} ${dragOverColumnId === col.id ? styles.dropZoneActive : ''}`}
             onDragOver={(e) => handleColumnDragOver(e, col.id)}
             onDragLeave={handleColumnDragLeave}
             onDrop={(e) => handleColumnDrop(e, col.id)}
@@ -136,7 +141,8 @@ function ResumeBoard({ data }: ResumeBoardProps) {
             ))}
           </div>
         </div>
-      ))}
+        );
+      })}
     </>
   );
 

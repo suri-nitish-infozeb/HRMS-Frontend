@@ -51,12 +51,31 @@
   flex-shrink: 0;
   width: 280px;
   min-height: 200px;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border);
+  background: rgba(31, 32, 43, 0.5);
+  border: 1px solid rgba(107, 158, 255, 0.35);
   border-radius: var(--radius-md);
   padding: 16px;
   display: flex;
   flex-direction: column;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.column:hover {
+  background: rgba(107, 158, 255, 0.08);
+  border-color: rgba(107, 158, 255, 0.5);
+  box-shadow: 0 0 0 1px rgba(107, 158, 255, 0.2), 0 0 12px rgba(107, 158, 255, 0.08);
+}
+
+.columnEmpty {
+  min-height: 0;
+}
+
+.columnEmpty .cards {
+  flex: none;
+}
+
+.columnEmpty .dropZone {
+  min-height: 72px;
 }
 
 .columnTitle {
