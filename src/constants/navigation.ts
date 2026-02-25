@@ -8,6 +8,7 @@ export const ROUTES = {
   DASHBOARD_HOME: '/', // AI home – same as HOME_AI
   TEAMS: '/teams',
   SETTINGS: '/settings',
+  RESUME: '/resume',
   UNSAVED_LAYOUT_1: '/unsaved-layout-1',
   UNSAVED_LAYOUT_2: '/unsaved-layout-2',
 } as const;
@@ -27,4 +28,5 @@ export const MAIN_MENU_ITEMS = [
   { id: 'home', label: 'Home', icon: 'home', path: ROUTES.HOME_STATIC },
   { id: 'teams', label: 'Teams', icon: 'users', path: ROUTES.TEAMS },
   { id: 'settings', label: 'Settings', icon: 'settings', path: ROUTES.SETTINGS },
+  { id: 'resume', label: 'Resume', icon: 'file-text', path: ROUTES.RESUME },
 ] as const;
