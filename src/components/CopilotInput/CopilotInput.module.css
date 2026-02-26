@@ -10,7 +10,7 @@
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 0 24px rgba(66, 102, 246, 0.25), 0 0 48px rgba(66, 102, 246, 0.15);
+  box-shadow: 0 0 24px var(--color-shadow-primary), 0 0 48px var(--color-shadow-primary-subtle);
   padding: 8px 8px 8px 0;
 }
 
@@ -66,7 +66,7 @@
 .button {
   padding: 14px 24px;
   background: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-button-on-primary);
   border: none;
   font-size: var(--text-sm);
   font-weight: var(--font-semibold);

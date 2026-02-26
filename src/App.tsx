@@ -13,6 +13,14 @@ import { ROUTES } from './constants';
 import './styles/variables.css';
 import './App.css';
 
+function ThemeSync({ children }: { children: React.ReactNode }) {
+  const theme = useAppSelector((state) => state.app.theme);
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+  return <>{children}</>;
+}
+
 function ModeSync() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -64,12 +72,14 @@ function AppRoutes() {
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <ModeSync />
-        <MainLayout>
-          <AppRoutes />
-        </MainLayout>
-      </BrowserRouter>
+      <ThemeSync>
+        <BrowserRouter>
+          <ModeSync />
+          <MainLayout>
+            <AppRoutes />
+          </MainLayout>
+        </BrowserRouter>
+      </ThemeSync>
     </Provider>
   );
 }

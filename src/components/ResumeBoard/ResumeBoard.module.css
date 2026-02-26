@@ -51,8 +51,8 @@
   flex-shrink: 0;
   width: 280px;
   min-height: 200px;
-  background: rgba(31, 32, 43, 0.5);
-  border: 1px solid rgba(107, 158, 255, 0.35);
+  background: var(--color-quickaction-card-bg);
+  border: 1px solid var(--color-quickaction-card-border);
   border-radius: var(--radius-md);
   padding: 16px;
   display: flex;
@@ -61,9 +61,9 @@
 }
 
 .column:hover {
-  background: rgba(107, 158, 255, 0.08);
-  border-color: rgba(107, 158, 255, 0.5);
-  box-shadow: 0 0 0 1px rgba(107, 158, 255, 0.2), 0 0 12px rgba(107, 158, 255, 0.08);
+  background: var(--color-quickaction-card-hover-bg);
+  border-color: var(--color-quickaction-card-hover-border);
+  box-shadow: 0 0 0 1px var(--color-quickaction-card-hover-shadow), 0 0 12px var(--color-shadow-primary-subtle);
 }
 
 .columnEmpty {

@@ -1,5 +1,5 @@
 .card {
-  background: #181b24;
+  background: var(--color-card-bg);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -11,7 +11,7 @@
 .title {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin: 0 0 16px;
   flex-shrink: 0;
 }
@@ -29,7 +29,7 @@
 }
 
 .gridLine {
-  stroke: rgba(255, 255, 255, 0.06);
+  stroke: var(--color-chart-grid);
   stroke-width: 1;
 }
 
@@ -38,12 +38,12 @@
 }
 
 .line {
-  stroke: #6b9eff;
+  stroke: var(--color-chart-line);
   stroke-width: 2;
   fill: none;
 }
 
 .axisLabel {
   font-size: 11px;
-  fill: #e5e7eb;
+  fill: var(--color-chart-axis);
 }

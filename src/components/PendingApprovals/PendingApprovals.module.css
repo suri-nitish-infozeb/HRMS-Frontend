@@ -1,5 +1,5 @@
 .card {
-  background: #181b24;
+  background: var(--color-card-bg);
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -9,7 +9,7 @@
 .title {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin: 0 0 16px;
 }
 
@@ -25,7 +25,7 @@
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(156, 163, 175, 0.15);
+  border-bottom: 1px solid var(--color-list-item-border);
 }
 
 .item:last-child {
@@ -36,8 +36,8 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #1e2a3a;
-  color: #ffffff;
+  background: var(--color-avatar-bg);
+  color: var(--color-text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,12 +57,12 @@
 .name {
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  color: #ffffff;
+  color: var(--color-text-primary);
 }
 
 .requestType {
   font-size: var(--text-xs);
-  color: #9ca3af;
+  color: var(--color-text-muted);
 }
 
 .tag {
@@ -75,18 +75,18 @@
 }
 
 .tag_urgent {
-  background: #ef4444;
-  color: #ffffff;
+  background: var(--color-tag-urgent-bg);
+  color: var(--color-tag-urgent-text);
 }
 
 .tag_pending {
-  background: #9ca3af;
-  color: #1f2937;
+  background: var(--color-tag-pending-bg);
+  color: var(--color-tag-pending-text);
 }
 
 .tag_new {
-  background: #93c5fd;
-  color: #1e3a5f;
+  background: var(--color-tag-new-bg);
+  color: var(--color-tag-new-text);
 }
 
 .button {
@@ -94,8 +94,8 @@
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
-  background: #252830;
-  color: #ffffff;
+  background: var(--color-button-secondary-bg);
+  color: var(--color-text-primary);
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
   cursor: pointer;
@@ -103,5 +103,5 @@
 }
 
 .button:hover {
-  background: #2d3139;
+  background: var(--color-button-secondary-hover);
 }

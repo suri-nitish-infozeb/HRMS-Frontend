@@ -7,6 +7,12 @@
     <title>hrms-frontend</title>
   </head>
   <body>
+    <script>
+      (function () {
+        var t = localStorage.getItem('hrms-theme');
+        document.documentElement.setAttribute('data-theme', (t === 'light' || t === 'dark') ? t : 'dark');
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
