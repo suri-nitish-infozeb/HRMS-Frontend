@@ -1,0 +1,96 @@
+.canvas {
+  width: 100%;
+  height: 100%;
+  padding: 12px 0;
+  box-sizing: border-box;
+
+  overflow-y: auto;  /* ✅ chat scroll */
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Empty state ─────────────────────────────────── */
+.empty {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+
+.emptyIcon {
+  font-size: 36px;
+  opacity: 0.3;
+}
+
+.emptyTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text-primary, #e2e8f0);
+  margin: 0;
+  opacity: 0.7;
+}
+
+.emptySubtitle {
+  font-size: 13px;
+  color: rgba(107, 158, 255, 0.6);
+  max-width: 320px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Typing indicator ────────────────────────────── */
+.typingRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 16px;
+}
+
+.typingAvatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(107,158,255,0.3), rgba(139,92,246,0.3));
+  border: 1px solid rgba(107,158,255,0.4);
+  color: rgba(107,158,255,1);
+  font-size: 9px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.typingBubble {
+  background: rgba(24, 27, 36, 0.7);
+  border: 1px solid rgba(107,158,255,0.15);
+  border-radius: 16px;
+  padding: 12px 18px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(107,158,255,0.6);
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.6; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}

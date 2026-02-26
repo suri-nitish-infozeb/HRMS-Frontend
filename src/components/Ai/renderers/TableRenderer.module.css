@@ -1,0 +1,101 @@
+.wrapper { width: 100%; }
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-text-primary, #e2e8f0);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(107,158,255,0.15);
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  table-layout: auto;
+}
+
+.th {
+  background: rgba(107,158,255,0.07);
+  color: rgba(107,158,255,0.7);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  padding: 11px 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(107,158,255,0.12);
+  white-space: nowrap;
+  min-width: 100px;
+}
+
+.th:first-child { min-width: 140px; }
+
+.td {
+  padding: 11px 16px;
+  color: var(--color-text-primary, #e2e8f0);
+  border-bottom: 1px solid rgba(107,158,255,0.07);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.td:first-child {
+  font-weight: 600;
+  color: rgba(107,158,255,0.9);
+  white-space: nowrap;
+}
+
+.rowEven { background: rgba(24,27,36,0.3); }
+.rowOdd  { background: rgba(24,27,36,0.5); }
+
+.rowEven:last-child .td,
+.rowOdd:last-child .td { border-bottom: none; }
+
+.rowEven:hover .td,
+.rowOdd:hover .td {
+  background: rgba(107,158,255,0.07);
+  transition: background 0.15s;
+}
+
+/* ── Link button ─────────────────────────── */
+.linkBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: rgba(107,158,255,0.1);
+  color: rgba(107,158,255,0.9);
+  border: 1px solid rgba(107,158,255,0.25);
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+
+.linkBtn:hover {
+  background: rgba(107,158,255,0.2);
+  border-color: rgba(107,158,255,0.5);
+  box-shadow: 0 0 12px rgba(107,158,255,0.2);
+}
+
+.empty { color: rgba(107,158,255,0.25); }
+
+.rowCount {
+  font-size: 11px;
+  color: rgba(107,158,255,0.4);
+  margin-top: 6px;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .th, .td { padding: 9px 12px; }
+}

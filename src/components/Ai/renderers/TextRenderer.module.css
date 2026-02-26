@@ -1,0 +1,39 @@
+.container {
+  line-height: 1.7;
+  font-size: 14px;
+  word-break: break-word;
+  color: var(--color-text-primary, #e2e8f0);
+}
+
+.paragraph {
+  margin: 8px 0;
+  color: var(--color-text-primary, #e2e8f0);
+}
+
+.orderedList {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.unorderedList {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.listItem {
+  margin: 6px 0;
+  color: var(--color-text-primary, #e2e8f0);
+}
+
+.link {
+  color: rgba(107,158,255,0.9);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(107,158,255,0.3);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.link:hover {
+  color: rgba(107,158,255,1);
+  border-color: rgba(107,158,255,0.7);
+}

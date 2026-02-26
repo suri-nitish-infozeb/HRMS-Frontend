@@ -2,25 +2,25 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  min-height: calc(100vh - var(--header-height) - 48px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+  min-height: calc(100vh - var(--header-height) - 48px);
   transition: justify-content 0.4s ease;
 }
 
 .pageResults {
   justify-content: flex-start;
-  min-height: calc(100vh - var(--header-height) - 48px);
-  padding-bottom: 100px;
+  height: calc(100vh - var(--header-height) - 48px);
+  overflow: hidden;
 }
 
 .centerBlock {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  transition: opacity 0.3s ease;
+  flex-shrink: 0;
 }
 
 .greeting {
@@ -43,9 +43,7 @@
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+  50% { opacity: 0; }
 }
 
 .quickActions {
@@ -55,24 +53,33 @@
 
 .canvas {
   flex: 1;
-  min-height: 320px;
+  min-height: 0;
   margin-top: 24px;
-  padding: 20px;
+  /* bottom padding = input bar height + some breathing room */
+  padding-bottom: 110px;
   background: rgba(24, 27, 36, 0.4);
   border-radius: 12px;
   border: 1px solid rgba(107, 158, 255, 0.15);
   animation: canvasIn 0.4s ease-out;
+  /* ✅ internal scroll only */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* slim scrollbar matching dark theme */
+.canvas::-webkit-scrollbar       { width: 4px; }
+.canvas::-webkit-scrollbar-track { background: transparent; }
+.canvas::-webkit-scrollbar-thumb {
+  background: rgba(107, 158, 255, 0.2);
+  border-radius: 4px;
+}
+.canvas::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 158, 255, 0.4);
 }
 
 @keyframes canvasIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .inputBottom {
@@ -83,17 +90,12 @@
   padding: 16px 24px 24px;
   background: linear-gradient(to top, var(--color-bg) 60%, transparent);
   animation: inputSlideUp 0.4s ease-out;
+  z-index: 10;
 }
 
 @keyframes inputSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .inputBottom > * {
