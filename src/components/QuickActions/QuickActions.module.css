@@ -1,0 +1,96 @@
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--color-quickaction-card-bg);
+  border: 1px solid var(--color-quickaction-card-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  background: var(--color-quickaction-card-hover-bg);
+  border-color: var(--color-quickaction-card-hover-border);
+  box-shadow: 0 0 0 1px var(--color-quickaction-card-hover-shadow), 0 0 12px var(--color-shadow-primary-subtle);
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-quickaction-icon-bg);
+  border: 1px solid var(--color-quickaction-card-border);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.iconWrap svg {
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.cardDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 16px;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.actionLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.actionLink:hover {
+  color: var(--color-primary-hover);
+}
+
+.arrow {
+  font-size: 1em;
+  line-height: 1;
+}

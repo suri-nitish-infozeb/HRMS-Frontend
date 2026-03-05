@@ -1,0 +1,16 @@
+export { default as MainLayout } from './MainLayout';
+export { default as Sidebar } from './Sidebar';
+export { default as Header } from './Header';
+export { default as Card } from './Card';
+export { default as CopilotInput } from './CopilotInput';
+export { default as QuickStats } from './QuickStats';
+export { default as QuickActions } from './QuickActions';
+export { default as MetricCard } from './MetricCard';
+export { default as DepartmentChart } from './DepartmentChart';
+export { default as PendingApprovals } from './PendingApprovals';
+export { default as Loader } from './Loader';
+export { default as AttritionChart } from './AttritionChart';
+export type { QuickStatItem } from './QuickStats';
+export type { QuickActionItem } from './QuickActions';
+export type { MetricCardProps } from './MetricCard';
+export type { AttritionData } from './AttritionChart';

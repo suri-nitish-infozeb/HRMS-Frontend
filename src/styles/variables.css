@@ -1,0 +1,141 @@
+/* Shared layout & typography (theme-agnostic) */
+:root,
+[data-theme='light'],
+[data-theme='dark'] {
+  --sidebar-width: 240px;
+  --sidebar-width-collapsed: 64px;
+  --header-height: 64px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+}
+
+/* Dark theme (default) – white as primary surface feel, blue as secondary/accent */
+[data-theme='dark'],
+:root {
+  --color-primary: #4266f6;
+  --color-primary-hover: #5b7cff;
+  --color-primary-light: #282a3a;
+  --color-primary-light-hover: #32344a;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #e0e0e0;
+  --color-text-muted: #c0c0c0;
+  --color-border: #2a2b38;
+  --color-border-light: #252630;
+  --color-bg: #0e0e14;
+  --color-bg-subtle: #1f202b;
+  --color-bg-sidebar: #111118;
+  --color-bg-content: #0d0e12;
+  --color-notification-dot: #e53e3e;
+  --color-sidebar-active-bg: #282a3a;
+  --color-sidebar-active-border: rgba(66, 102, 246, 0.4);
+  --color-logo-icon-bg: #1e2240;
+  --color-logo-icon-text: #5b7cff;
+  --color-logo-text: #ffffff;
+  --color-logo-accent: #5b7cff;
+  --color-hint: #8ba3c7;
+  --color-shadow: rgba(0, 0, 0, 0.4);
+  --color-shadow-strong: rgba(0, 0, 0, 0.3);
+  --color-shadow-primary: rgba(66, 102, 246, 0.25);
+  --color-shadow-primary-subtle: rgba(66, 102, 246, 0.15);
+  --color-button-on-primary: #ffffff;
+  --color-card-bg: #181b24;
+  --color-canvas-bg: rgba(24, 27, 36, 0.4);
+  --color-canvas-border: rgba(107, 158, 255, 0.15);
+  --color-chart-grid: rgba(255, 255, 255, 0.06);
+  --color-chart-line: #6b9eff;
+  --color-chart-axis: #e5e7eb;
+  --color-quickaction-card-bg: rgba(31, 32, 43, 0.5);
+  --color-quickaction-card-border: rgba(107, 158, 255, 0.35);
+  --color-quickaction-card-hover-bg: rgba(107, 158, 255, 0.08);
+  --color-quickaction-card-hover-border: rgba(107, 158, 255, 0.5);
+  --color-quickaction-card-hover-shadow: rgba(107, 158, 255, 0.2);
+  --color-quickaction-icon-bg: rgba(47, 63, 95, 0.5);
+  --color-spinner-track: rgba(107, 158, 255, 0.2);
+  --color-spinner-head: #6b9eff;
+  --color-tag-urgent-bg: #ef4444;
+  --color-tag-urgent-text: #ffffff;
+  --color-tag-pending-bg: #9ca3af;
+  --color-tag-pending-text: #1f2937;
+  --color-tag-new-bg: #93c5fd;
+  --color-tag-new-text: #1e3a5f;
+  --color-list-item-border: rgba(156, 163, 175, 0.15);
+  --color-avatar-bg: #1e2a3a;
+  --color-button-secondary-bg: #252830;
+  --color-button-secondary-hover: #2d3139;
+  /* Neumorphic theme switch – soft white in dark mode */
+  --color-switch-track: #9ca0ac;
+  --color-switch-track-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  --color-switch-thumb: #e2e4e8;
+  --color-switch-thumb-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Light theme – white primary, blue secondary */
+[data-theme='light'] {
+  --color-primary: #4266f6;
+  --color-primary-hover: #5b7cff;
+  --color-primary-light: #eef2ff;
+  --color-primary-light-hover: #e0e7ff;
+  --color-text-primary: #0e0e14;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-border-light: #d1d5db;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f5f5f7;
+  --color-bg-sidebar: #fafafa;
+  --color-bg-content: #f8f9fa;
+  --color-notification-dot: #e53e3e;
+  --color-sidebar-active-bg: #eef2ff;
+  --color-sidebar-active-border: rgba(66, 102, 246, 0.4);
+  --color-logo-icon-bg: #eef2ff;
+  --color-logo-icon-text: #4266f6;
+  --color-logo-text: #0e0e14;
+  --color-logo-accent: #4266f6;
+  --color-hint: #4b5563;
+  --color-shadow: rgba(0, 0, 0, 0.12);
+  --color-shadow-strong: rgba(0, 0, 0, 0.15);
+  --color-shadow-primary: rgba(66, 102, 246, 0.2);
+  --color-shadow-primary-subtle: rgba(66, 102, 246, 0.1);
+  --color-button-on-primary: #ffffff;
+  --color-card-bg: #ffffff;
+  --color-canvas-bg: rgba(245, 245, 247, 0.9);
+  --color-canvas-border: rgba(66, 102, 246, 0.2);
+  --color-chart-grid: rgba(0, 0, 0, 0.06);
+  --color-chart-line: #4266f6;
+  --color-chart-axis: #374151;
+  --color-quickaction-card-bg: rgba(255, 255, 255, 0.9);
+  --color-quickaction-card-border: rgba(66, 102, 246, 0.25);
+  --color-quickaction-card-hover-bg: rgba(66, 102, 246, 0.06);
+  --color-quickaction-card-hover-border: rgba(66, 102, 246, 0.4);
+  --color-quickaction-card-hover-shadow: rgba(66, 102, 246, 0.15);
+  --color-quickaction-icon-bg: rgba(66, 102, 246, 0.1);
+  --color-spinner-track: rgba(66, 102, 246, 0.2);
+  --color-spinner-head: #4266f6;
+  --color-tag-urgent-bg: #ef4444;
+  --color-tag-urgent-text: #ffffff;
+  --color-tag-pending-bg: #9ca3af;
+  --color-tag-pending-text: #1f2937;
+  --color-tag-new-bg: #93c5fd;
+  --color-tag-new-text: #1e3a5f;
+  --color-list-item-border: rgba(156, 163, 175, 0.25);
+  --color-avatar-bg: #e5e7eb;
+  --color-button-secondary-bg: #e5e7eb;
+  --color-button-secondary-hover: #d1d5db;
+  /* Neumorphic theme switch */
+  --color-switch-track: #d3d6d9;
+  --color-switch-track-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  --color-switch-thumb: #ececec;
+  --color-switch-thumb-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15), -1px -1px 2px rgba(255, 255, 255, 0.9);
+}

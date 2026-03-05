@@ -1,0 +1,7 @@
+{
+  "title": "Employee Attrition by Department",
+  "subtitle": "Annual attrition rate (%)",
+  "categories": ["Engineering", "Sales", "Marketing", "HR", "Operations", "Support"],
+  "values": [12, 18, 15, 8, 11, 22],
+  "unit": "%"
+}
