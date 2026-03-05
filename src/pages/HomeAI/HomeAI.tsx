@@ -56,9 +56,10 @@ function HomeAI() {
   const phrase1 = getGreetingPhrase(user.name);
   const [displayText, setDisplayText] = useState('');
   const [hasAsked, setHasAsked] = useState(false);
-  const [response, setResponse] = useState<Message | null>(null);
+  // const [response, setResponse] = useState<Message | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
+  
 
 const handleAsk = useCallback(async (value: string) => {
   if (!value.trim()) return;
