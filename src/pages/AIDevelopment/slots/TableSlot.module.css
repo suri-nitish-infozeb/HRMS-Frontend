@@ -59,9 +59,9 @@
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.table tbody tr:hover {
+/* .table tbody tr:hover {
   background: rgba(255,255,255,0.04);
-}
+} */
 
 .badge {
   display: inline-flex;

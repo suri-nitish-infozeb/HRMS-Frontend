@@ -3,20 +3,26 @@
     {
       "id": "chart-slot",
       "slot": "chart",
-      "layout": { "md": 6, "lg": 6 },
-      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Applications Trend</div><div class=\"h-card__meta\">Download</div></div><div class=\"h-card__body\"><div class=\"h-chartPlaceholder\">Chart HTML will come from backend</div></div></div>"
+      "layout": { "md": 12, "lg": 12 },
+      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Applications Trend</div><div class=\"h-card__meta\">Download</div></div><div class=\"h-card__body\"><div class=\"h-chartPlaceholder\">Chart's HTML will come from backend</div></div></div>"
     },
     {
       "id": "table-slot",
       "slot": "table",
-      "layout": { "md": 6, "lg": 6 },
-      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Recent Applications</div><div class=\"h-card__meta\">3 records</div></div><div class=\"h-card__body\"><table class=\"h-table\"><thead><tr><th style=\"width:40%;\">Candidate</th><th style=\"width:40%;\">Role</th><th style=\"width:20%;\">Status</th></tr></thead><tbody><tr class=\"h-row\"><td>Tanushka Rathore</td><td>Frontend Developer</td><td><span class=\"h-badge\">Screening</span></td></tr><tr class=\"h-row\"><td>Ananya Jain</td><td>Backend Developer</td><td><span class=\"h-badge\">Interview</span></td></tr><tr class=\"h-row\"><td>Khushi Gupta</td><td>UI Designer</td><td><span class=\"h-badge\">Shortlisted</span></td></tr></tbody></table></div></div>"
+      "layout": { "md": 12, "lg": 12 },
+      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Recent Applications</div><div class=\"h-card__meta\">6 records</div></div><div class=\"h-card__body\"><div class=\"h-tableWrap\"><table class=\"h-table\"><thead><tr><th>Candidate</th><th>Role</th><th>Department</th><th>Experience</th><th>Location</th><th>Applied Date</th><th>Recruiter</th><th>Status</th></tr></thead><tbody><tr class=\"h-row\"><td>Tanushka Rathore</td><td>Frontend Developer</td><td>Engineering</td><td>2 Years</td><td>Noida</td><td>10 Mar 2026</td><td>Sonia Lohia</td><td><span class=\"h-badge\">Screening</span></td></tr><tr class=\"h-row\"><td>Ananya Jain</td><td>Backend Developer</td><td>Engineering</td><td>3 Years</td><td>Delhi</td><td>11 Mar 2026</td><td>Khushi Tiwari</td><td><span class=\"h-badge\">2 Technical Round</span></td></tr><tr class=\"h-row\"><td>Ashna Das</td><td>Associate UI Designer</td><td>Design</td><td>1.5 Years</td><td>Gurgaon</td><td>09 Mar 2026</td><td>Nitesh Suri</td><td><span class=\"h-badge\">Shortlisted</span></td></tr><tr class=\"h-row\"><td>Shaurya Singh</td><td>Business Analyst</td><td>Analyst</td><td>4 Years</td><td>Bangalore</td><td>08 Mar 2026</td><td>Jancy Mary</td><td><span class=\"h-badge\">Technical Round</span></td></tr><tr class=\"h-row\"><td>Neha Verma</td><td>Product Manager</td><td>Product</td><td>5 Years</td><td>Mumbai</td><td>07 Mar 2026</td><td>Gaurav Lohia</td><td><span class=\"h-badge\">HR Round</span></td></tr><tr class=\"h-row\"><td>Niti Negi</td><td>Data Analyst</td><td>Analytics</td><td>2.5 Years</td><td>Pune</td><td>06 Mar 2026</td><td>Simran Khanna</td><td><span class=\"h-badge\">Offer Stage</span></td></tr><tr class=\"h-row\"><td>Arutna Rathore</td><td>Senior FullStack Developer</td><td>Engineering</td><td>2.9 Years</td><td>Bengaluru</td><td>10 Feburary 2026</td><td>Sonia Lohia</td><td><span class=\"h-badge\">Rejected</span></td></tbody></table></div></div></div>"
     },
     {
       "id": "text-slot",
       "slot": "text",
       "layout": { "md": 12, "lg": 12 },
-      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Weekly Summary</div><div class=\"h-card__meta\">This week</div></div><div class=\"h-card__body\">Applications increased by 20% compared to last week. One interview is scheduled </div></div>"
+      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Weekly Summary</div><div class=\"h-card__meta\">This week</div></div><div class=\"h-card__body\">Applications increased by 20% compared to last week. 2 interviews are scheduled.</div></div>"
+    },
+    {
+      "id": "list-slot",
+      "slot": "list",
+      "layout": { "md": 12, "lg": 12 },
+      "html": "<div class=\"h-card\"><div class=\"h-card__header\"><div class=\"h-card__title\">Upcoming Interviews</div><div class=\"h-card__meta\">Today</div></div><div class=\"h-card__body\"><ul class=\"h-list\"><li class=\"h-listItem\"><span>Tanushka Rathore - Frontend Developer</span><span> 10:30 AM</span></li><li class=\"h-listItem\"><span>Ananya Jain - Backend Developer</span><span> 12:00 PM</span></li><li class=\"h-listItem\"><span>Ashna Das - UI Designer</span><span> 3:00 PM</span></li></ul></div></div>"
     }
   ]
 }

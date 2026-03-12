@@ -1,6 +1,6 @@
 export type Layout = { md?: number; lg?: number };
 
-export type SlotName = "chart" | "table" | "text";
+export type SlotName = "chart" | "table" | "text" | "list";
 
 export type UIHtmlBlock = {
   id: string;

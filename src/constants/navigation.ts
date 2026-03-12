@@ -17,6 +17,7 @@ export const SAVED_LAYOUTS: SavedLayout[] = [
   { id: 'attrition', label: 'Employee Attrition', icon: 'users', path: ROUTES.EMPLOYEE_ATTRITION },
   { id: 'approvals', label: 'Employee Approvals', icon: 'file-text', path: ROUTES.EMPLOYEE_APPROVALS },
   { id: 'dashboard', label: 'Dashboard Home', icon: 'layout-dashboard', path: ROUTES.HOME_AI },
+  
 ];
 
 export const UNSAVED_LAYOUTS: SavedLayout[] = [

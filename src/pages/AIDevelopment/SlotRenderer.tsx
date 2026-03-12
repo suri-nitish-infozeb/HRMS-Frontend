@@ -1,3 +1,5 @@
+import parse from "html-react-parser";
+import DOMPurify from "dompurify";
 import styles from "./SlotRenderer.module.css";
 import type { UIResponse, UIHtmlBlock } from "./types";
 
@@ -13,6 +15,11 @@ function widthClass(md?: number, lg?: number): string {
   return `${mdClass} ${lgClass}`;
 }
 
+function renderParsedHtml(html: string) {
+  const safeHtml = DOMPurify.sanitize(html);
+  return parse(safeHtml);
+}
+
 export default function SlotRenderer({ blocks }: Props) {
   return (
     <div className={styles.wrap}>
@@ -21,8 +28,9 @@ export default function SlotRenderer({ blocks }: Props) {
           <div
             key={block.id}
             className={`${styles.col} ${widthClass(block.layout?.md, block.layout?.lg)}`}
-            dangerouslySetInnerHTML={{ __html: renderSlotHtml(block) }}
-          />
+          >
+            {renderParsedHtml(renderSlotHtml(block))}
+          </div>
         ))}
       </div>
     </div>
@@ -34,6 +42,7 @@ function renderSlotHtml(block: UIHtmlBlock): string {
     case "chart":
     case "table":
     case "text":
+    case "list":
       return block.html;
     default:
       return "";
