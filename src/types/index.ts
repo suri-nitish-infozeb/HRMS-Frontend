@@ -1,4 +1,5 @@
 export type AppMode = 'ai' | 'static';
+export type Theme = 'light' | 'dark';
 
 export interface User {
   name: string;

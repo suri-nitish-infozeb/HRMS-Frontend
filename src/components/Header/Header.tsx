@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ChevronDown, Bell, Sparkles, LayoutGrid } from 'lucide-react';
-import { useAppSelector, useAppDispatch } from '../../hooks';
+import { ChevronDown, Bell, Sparkles, LayoutGrid, Sun, Moon } from 'lucide-react';
+import { useAppSelector, useAppDispatch, useTheme } from '../../hooks';
 import { setMode } from '../../store/slices/appSlice';
 import { ROUTES } from '../../constants';
 import type { AppMode } from '../../types';
@@ -14,6 +14,7 @@ function Header() {
   const mode = useAppSelector((state) => state.app.mode);
   const user = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -73,6 +74,28 @@ function Header() {
             </ul>
           )}
         </div>
+        <button
+          type="button"
+          className={styles.themeSwitch}
+          role="switch"
+          aria-checked={theme === 'dark'}
+          aria-label={theme === 'dark' ? 'Dark mode on, switch to light' : 'Light mode on, switch to dark'}
+          title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+        >
+          <span className={styles.themeSwitchSun} aria-hidden>
+            <Sun size={16} strokeWidth={1.8} />
+          </span>
+          <span className={styles.themeSwitchTrack}>
+            <span
+              className={`${styles.themeSwitchThumb} ${theme === 'dark' ? styles.themeSwitchThumbDark : ''}`}
+              aria-hidden
+            />
+          </span>
+          <span className={styles.themeSwitchMoon} aria-hidden>
+            <Moon size={16} strokeWidth={1.8} />
+          </span>
+        </button>
       </div>
 
       <div className={styles.right}>

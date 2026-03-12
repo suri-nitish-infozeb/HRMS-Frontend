@@ -9,10 +9,19 @@ import HomeAI from './pages/HomeAI';
 import AIDevelopment from './pages/AIDevelopment/AIDevelopment';
 import HomeStatic from './pages/HomeStatic';
 import Placeholder from './pages/Placeholder';
+import ResumeBoardPage from './pages/ResumeBoard';
 import { ROUTES } from './constants';
 
 import './styles/variables.css';
 import './App.css';
+
+function ThemeSync({ children }: { children: React.ReactNode }) {
+  const theme = useAppSelector((state) => state.app.theme);
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+  }, [theme]);
+  return <>{children}</>;
+}
 
 function ModeSync() {
   const location = useLocation();
@@ -23,8 +32,8 @@ function ModeSync() {
   useEffect(() => {
     const path = location.pathname;
     const isStaticRoute =
-      path === ROUTES.HOME_STATIC || path === ROUTES.TEAMS || path === ROUTES.SETTINGS;
-      const isAIRoute =
+      path === ROUTES.HOME_STATIC || path === ROUTES.TEAMS || path === ROUTES.SETTINGS || path === ROUTES.RESUME;
+    const isAIRoute =
       path === ROUTES.HOME_AI ||
       path === '/' ||
       path === ROUTES.AI_DEVELOPMENT ||
@@ -55,6 +64,7 @@ function AppRoutes() {
       <Route path={ROUTES.TEAMS} element={<Placeholder title="Teams" />} />
       <Route path={ROUTES.SETTINGS} element={<Placeholder title="Settings" />} />
       <Route path={ROUTES.AI_DEVELOPMENT} element={<AIDevelopment />} />
+      <Route path={ROUTES.RESUME} element={<ResumeBoardPage />} />
       <Route path={ROUTES.EMPLOYEE_ATTRITION} element={<Placeholder title="Employee Attrition" />} />
       <Route path={ROUTES.EMPLOYEE_APPROVALS} element={<Placeholder title="Employee Approvals" />} />
       <Route path={ROUTES.UNSAVED_LAYOUT_1} element={<Placeholder title="Custom Report" />} />
@@ -66,12 +76,14 @@ function AppRoutes() {
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <ModeSync />
-        <MainLayout>
-          <AppRoutes />
-        </MainLayout>
-      </BrowserRouter>
+      <ThemeSync>
+        <BrowserRouter>
+          <ModeSync />
+          <MainLayout>
+            <AppRoutes />
+          </MainLayout>
+        </BrowserRouter>
+      </ThemeSync>
     </Provider>
   );
 }

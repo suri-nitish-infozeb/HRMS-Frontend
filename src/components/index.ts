@@ -10,7 +10,6 @@ export { default as DepartmentChart } from './DepartmentChart';
 export { default as PendingApprovals } from './PendingApprovals';
 export { default as Loader } from './Loader';
 export { default as AttritionChart } from './AttritionChart';
-export { default as ReplitBadge } from './ReplitBadge';
 export type { QuickStatItem } from './QuickStats';
 export type { QuickActionItem } from './QuickActions';
 export type { MetricCardProps } from './MetricCard';

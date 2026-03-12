@@ -72,7 +72,7 @@ function Sidebar() {
         <div className={styles.logoIcon}>
           <span>H</span>
         </div>
-        {!collapsed && <span className={styles.logoText}>HRMS.ai</span>}
+        {!collapsed && <span className={styles.logoText}>HRtBeat.ai</span>}
       </div>
 
       <nav className={styles.nav}>

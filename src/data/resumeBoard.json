@@ -1,0 +1,60 @@
+{
+  "filters": {
+    "projects": [{ "id": "alpha", "label": "Alpha" }],
+    "suppliers": [{ "id": "all", "label": "All" }]
+  },
+  "columns": [
+    { "id": "new", "title": "New" },
+    { "id": "under_review", "title": "Under review" },
+    { "id": "rejected", "title": "Rejected" },
+    { "id": "short_list", "title": "Short List" },
+    { "id": "offered", "title": "Offered" }
+  ],
+  "resumes": [
+    {
+      "id": "1",
+      "candidateName": "Alice Johnson",
+      "initials": "AJ",
+      "affiliation": "Acme Recruiters",
+      "date": "Feb 19, 2026",
+      "columnId": "new",
+      "actions": ["view", "download"]
+    },
+    {
+      "id": "2",
+      "candidateName": "Diego Marquez",
+      "initials": "DM",
+      "affiliation": "Independent",
+      "date": "Feb 24, 2026",
+      "columnId": "new",
+      "actions": ["view", "download"]
+    },
+    {
+      "id": "3",
+      "candidateName": "Brandon Lee",
+      "initials": "BL",
+      "affiliation": "TalentBay",
+      "date": "Feb 13, 2026",
+      "columnId": "rejected",
+      "actions": ["view", "download", "send_email"]
+    },
+    {
+      "id": "4",
+      "candidateName": "Chandra Patel",
+      "initials": "CP",
+      "affiliation": "Acme Recruiters",
+      "date": "Feb 23, 2026",
+      "columnId": "short_list",
+      "actions": ["view", "download", "send_email"]
+    },
+    {
+      "id": "5",
+      "candidateName": "Evelyn Zhang",
+      "initials": "EZ",
+      "affiliation": "TalentBay",
+      "date": "Feb 5, 2026",
+      "columnId": "offered",
+      "actions": ["view", "download", "send_offer"]
+    }
+  ]
+}

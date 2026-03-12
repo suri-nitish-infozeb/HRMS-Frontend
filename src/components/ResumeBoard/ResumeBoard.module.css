@@ -1,0 +1,110 @@
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filterLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.select,
+.input {
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  min-width: 120px;
+}
+
+.input {
+  min-width: 110px;
+}
+
+.select:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.clearBtn {
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s ease;
+}
+
+.clearBtn:hover {
+  background: var(--color-primary-hover);
+}
+
+.column {
+  flex-shrink: 0;
+  width: 280px;
+  min-height: 200px;
+  background: var(--color-quickaction-card-bg);
+  border: 1px solid var(--color-quickaction-card-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.column:hover {
+  background: var(--color-quickaction-card-hover-bg);
+  border-color: var(--color-quickaction-card-hover-border);
+  box-shadow: 0 0 0 1px var(--color-quickaction-card-hover-shadow), 0 0 12px var(--color-shadow-primary-subtle);
+}
+
+.columnEmpty {
+  min-height: 0;
+}
+
+.columnEmpty .cards {
+  flex: none;
+}
+
+.columnEmpty .dropZone {
+  min-height: 72px;
+}
+
+.columnTitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-primary);
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+}
+
+.dropZone {
+  min-height: 120px;
+  margin: 0 -8px;
+  padding: 0 8px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.dropZoneActive {
+  background: var(--color-primary-light);
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--radius-sm);
+}

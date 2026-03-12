@@ -18,7 +18,7 @@
 }
 
 .contentStatic {
-  background: #0d0e12;
+  background: var(--color-bg-content);
 }
 
 .contentEnter {
