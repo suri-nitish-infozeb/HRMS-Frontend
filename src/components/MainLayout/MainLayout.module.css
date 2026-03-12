@@ -4,9 +4,14 @@
   background: var(--color-bg);
 }
 
+.layout > * {
+  align-self: stretch;
+}
+
 .main {
   flex: 1;
   min-width: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

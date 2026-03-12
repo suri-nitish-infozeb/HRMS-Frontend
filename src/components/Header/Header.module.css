@@ -171,16 +171,57 @@
   background: var(--color-border);
 }
 
-.userInfo {
+.userDropdown {
+  position: relative;
+}
+
+.userTrigger {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 4px 8px 4px 12px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.userTrigger:hover {
+  background: var(--color-primary-light);
+}
+
+.userChevron {
+  color: var(--color-text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.userChevronOpen {
+  transform: rotate(180deg);
+}
+
+.userDropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 160px;
+  padding: 6px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px var(--color-shadow);
+  list-style: none;
+  margin: 0;
+  z-index: 100;
 }
 
 .userText {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  pointer-events: none;
 }
 
 .userName {

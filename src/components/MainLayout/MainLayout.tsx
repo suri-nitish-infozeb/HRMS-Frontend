@@ -1,5 +1,7 @@
 import { useState, useEffect, type ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
+import { useAppDispatch } from '../../hooks';
+import { setSidebarCollapsed } from '../../store/slices/appSlice';
 import { ROUTES } from '../../constants';
 import Sidebar from '../Sidebar';
 import Header from '../Header';
@@ -27,6 +29,11 @@ function ContentFadeIn({ children }: { children: ReactNode }) {
 
 function MainLayout({ children }: MainLayoutProps) {
   const location = useLocation();
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(setSidebarCollapsed(false));
+  }, [location.pathname, dispatch]);
 
   return (
     <div className={styles.layout}>

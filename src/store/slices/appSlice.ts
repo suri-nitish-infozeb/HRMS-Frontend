@@ -34,6 +34,9 @@ const appSlice = createSlice({
     toggleSidebar: (state) => {
       state.sidebarCollapsed = !state.sidebarCollapsed;
     },
+    setSidebarCollapsed: (state, action: { payload: boolean }) => {
+      state.sidebarCollapsed = action.payload;
+    },
     setTheme: (state, action: { payload: Theme }) => {
       state.theme = action.payload;
       if (typeof window !== 'undefined') {
@@ -49,5 +52,5 @@ const appSlice = createSlice({
   },
 });
 
-export const { setMode, toggleMode, toggleSidebar, setTheme, toggleTheme } = appSlice.actions;
+export const { setMode, toggleMode, toggleSidebar, setSidebarCollapsed, setTheme, toggleTheme } = appSlice.actions;
 export default appSlice.reducer;

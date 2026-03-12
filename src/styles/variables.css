@@ -74,6 +74,10 @@
   --color-avatar-bg: #1e2a3a;
   --color-button-secondary-bg: #252830;
   --color-button-secondary-hover: #2d3139;
+  --color-admin-deny-bg: #b91c1c;
+  --color-admin-deny-text: #ffffff;
+  --color-admin-role-bg: rgba(126, 34, 206, 0.25);
+  --color-admin-role-text: #c4b5fd;
   /* Neumorphic theme switch – soft white in dark mode */
   --color-switch-track: #9ca0ac;
   --color-switch-track-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -133,6 +137,10 @@
   --color-avatar-bg: #e5e7eb;
   --color-button-secondary-bg: #e5e7eb;
   --color-button-secondary-hover: #d1d5db;
+  --color-admin-deny-bg: #dc2626;
+  --color-admin-deny-text: #ffffff;
+  --color-admin-role-bg: #ede9fe;
+  --color-admin-role-text: #5b21b6;
   /* Neumorphic theme switch */
   --color-switch-track: #d3d6d9;
   --color-switch-track-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);

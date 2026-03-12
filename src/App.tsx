@@ -9,6 +9,7 @@ import HomeAI from './pages/HomeAI';
 import HomeStatic from './pages/HomeStatic';
 import Placeholder from './pages/Placeholder';
 import ResumeBoardPage from './pages/ResumeBoard';
+import Settings from './pages/Settings';
 import { ROUTES } from './constants';
 import './styles/variables.css';
 import './App.css';
@@ -30,7 +31,7 @@ function ModeSync() {
   useEffect(() => {
     const path = location.pathname;
     const isStaticRoute =
-      path === ROUTES.HOME_STATIC || path === ROUTES.TEAMS || path === ROUTES.SETTINGS || path === ROUTES.RESUME;
+      path === ROUTES.HOME_STATIC || path === ROUTES.TEAMS || path === ROUTES.RESUME;
     const isAIRoute =
       path === ROUTES.HOME_AI ||
       path === '/' ||
@@ -59,7 +60,7 @@ function AppRoutes() {
       <Route path={ROUTES.HOME_AI} element={<HomeAI />} />
       <Route path={ROUTES.HOME_STATIC} element={<HomeStatic />} />
       <Route path={ROUTES.TEAMS} element={<Placeholder title="Teams" />} />
-      <Route path={ROUTES.SETTINGS} element={<Placeholder title="Settings" />} />
+      <Route path={ROUTES.SETTINGS} element={<Settings />} />
       <Route path={ROUTES.RESUME} element={<ResumeBoardPage />} />
       <Route path={ROUTES.EMPLOYEE_ATTRITION} element={<Placeholder title="Employee Attrition" />} />
       <Route path={ROUTES.EMPLOYEE_APPROVALS} element={<Placeholder title="Employee Approvals" />} />

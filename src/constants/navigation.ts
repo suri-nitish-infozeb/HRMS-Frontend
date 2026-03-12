@@ -27,6 +27,5 @@ export const UNSAVED_LAYOUTS: SavedLayout[] = [
 export const MAIN_MENU_ITEMS = [
   { id: 'home', label: 'Home', icon: 'home', path: ROUTES.HOME_STATIC },
   { id: 'teams', label: 'Teams', icon: 'users', path: ROUTES.TEAMS },
-  { id: 'settings', label: 'Settings', icon: 'settings', path: ROUTES.SETTINGS },
   { id: 'resume', label: 'Resume', icon: 'file-text', path: ROUTES.RESUME },
 ] as const;

@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
-import { Users, FileText, LayoutDashboard, Home, Settings, PanelLeftClose, PanelLeft, FolderOpen, BarChart2 } from 'lucide-react';
+import { Users, FileText, LayoutDashboard, Home, PanelLeftClose, PanelLeft, FolderOpen, BarChart2 } from 'lucide-react';
 import { SAVED_LAYOUTS, UNSAVED_LAYOUTS, MAIN_MENU_ITEMS, ROUTES } from '../../constants';
 import { useAppSelector, useAppDispatch } from '../../hooks';
 import { toggleSidebar } from '../../store/slices/appSlice';
@@ -10,7 +10,6 @@ const iconMap = {
   'file-text': FileText,
   'layout-dashboard': LayoutDashboard,
   home: Home,
-  settings: Settings,
   folder: FolderOpen,
   'bar-chart': BarChart2,
 } as const;
