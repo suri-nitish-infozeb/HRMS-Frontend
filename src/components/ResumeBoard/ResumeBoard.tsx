@@ -1,26 +1,66 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import ResumeBoardStructure from './ResumeBoardStructure';
 import ResumeCard, { type ResumeCardItem } from './ResumeCard';
+import { useAppSelector, useAppDispatch } from '../../hooks';
+import { fetchResumesByProject, fetchAllResumes } from '../../store/slices/resumesSlice';
 import type { ResumeBoardData } from '../../types/resumeBoard';
 import styles from './ResumeBoard.module.css';
 
 const DRAG_DATA_KEY = 'application/x-resume-id';
+
+const PROJECT_ALL_OPTION = { id: 'all', label: 'All' };
 
 interface ResumeBoardProps {
   data: ResumeBoardData;
 }
 
 function ResumeBoard({ data }: ResumeBoardProps) {
+  const dispatch = useAppDispatch();
+  const { list: projects, loading: projectsLoading, error: projectsError } = useAppSelector((state) => state.projects);
+  const { list: resumesFromApi, loading: resumesLoading, error: resumesError, projectId: resumesProjectId } = useAppSelector((state) => state.resumes);
   const [resumes, setResumes] = useState<ResumeCardItem[]>(data.resumes);
-  const [projectId, setProjectId] = useState(data.filters.projects[0]?.id ?? '');
-  const [supplierId, setSupplierId] = useState(data.filters.suppliers[0]?.id ?? '');
+  const [projectId, setProjectId] = useState('');
   const [fromDate, setFromDate] = useState('');
   const [toDate, setToDate] = useState('');
   const [dragOverColumnId, setDragOverColumnId] = useState<string | null>(null);
 
+  const projectOptionsFromApi = projects.length > 0 ? projects : data.filters.projects;
+  const projectOptions = [PROJECT_ALL_OPTION, ...projectOptionsFromApi];
+  const projectIdValid = projectOptions.some((p) => p.id === projectId);
+
+  useEffect(() => {
+    if (projectOptionsFromApi.length === 0) return;
+    if (!projectId || !projectIdValid) {
+      setProjectId(PROJECT_ALL_OPTION.id);
+    }
+  }, [projectOptionsFromApi.length, projectId, projectIdValid]);
+
+  useEffect(() => {
+    if (projectId === PROJECT_ALL_OPTION.id) {
+      void dispatch(fetchAllResumes());
+      return;
+    }
+    if (projectId) {
+      void dispatch(fetchResumesByProject(projectId));
+    }
+  }, [dispatch, projectId]);
+
+  useEffect(() => {
+    if (projectId === PROJECT_ALL_OPTION.id) {
+      if (resumesProjectId === 'all') {
+        if (resumesLoading) setResumes([]);
+        else setResumes(resumesFromApi);
+      }
+      return;
+    }
+    if (resumesProjectId === projectId) {
+      if (resumesLoading) setResumes([]);
+      else setResumes(resumesFromApi);
+    }
+  }, [projectId, resumesProjectId, resumesLoading, resumesFromApi]);
+
   const handleClearFilters = () => {
-    setProjectId(data.filters.projects[0]?.id ?? '');
-    setSupplierId(data.filters.suppliers[0]?.id ?? '');
+    setProjectId(PROJECT_ALL_OPTION.id);
     setFromDate('');
     setToDate('');
   };
@@ -69,24 +109,23 @@ function ResumeBoard({ data }: ResumeBoardProps) {
           className={styles.select}
           value={projectId}
           onChange={(e) => setProjectId(e.target.value)}
+          disabled={projectsLoading}
+          aria-busy={projectsLoading}
+          aria-invalid={!!projectsError}
         >
-          {data.filters.projects.map((p) => (
-            <option key={p.id} value={p.id}>{p.label}</option>
-          ))}
+          {projectsLoading && projectOptionsFromApi.length === 0 ? (
+            <option value="">Loading…</option>
+          ) : projectsError && projectOptionsFromApi.length === 0 ? (
+            <option value="">Error loading projects</option>
+          ) : (
+            projectOptions.map((p) => (
+              <option key={p.id} value={p.id}>{p.label}</option>
+            ))
+          )}
         </select>
-      </div>
-      <div className={styles.filterGroup}>
-        <label className={styles.filterLabel} htmlFor="resume-supplier">Supplier</label>
-        <select
-          id="resume-supplier"
-          className={styles.select}
-          value={supplierId}
-          onChange={(e) => setSupplierId(e.target.value)}
-        >
-          {data.filters.suppliers.map((s) => (
-            <option key={s.id} value={s.id}>{s.label}</option>
-          ))}
-        </select>
+        {projectsError && projectOptionsFromApi.length > 0 && (
+          <span className={styles.filterError} role="alert">{projectsError}</span>
+        )}
       </div>
       <div className={styles.filterGroup}>
         <label className={styles.filterLabel} htmlFor="resume-from">From</label>
@@ -116,8 +155,19 @@ function ResumeBoard({ data }: ResumeBoardProps) {
     </>
   );
 
+  const showResumesLoading = resumesLoading && resumesProjectId === projectId;
+  const showResumesError = !!resumesError && resumesProjectId === projectId;
+
   const columnSlot = (
     <>
+      {showResumesError && (
+        <div className={styles.filterError} role="alert">
+          {resumesError}
+        </div>
+      )}
+      {showResumesLoading && (
+        <p className={styles.loadingText}>Loading resumes…</p>
+      )}
       {data.columns.map((col) => {
         const isEmpty = getResumesForColumn(col.id).length === 0;
         return (
