@@ -5,8 +5,9 @@
 }
 
 .title {
-  font-size: 14px;
-  font-weight: 700;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-text-primary);
   opacity: 0.9;
 }
 
@@ -17,9 +18,9 @@
 }
 
 .block {
-  border: 1px solid rgba(107, 158, 255, 0.15);
-  border-radius: 14px;
+  border: 1px solid var(--color-canvas-border);
+  border-radius: var(--radius-lg);
   padding: 12px;
-  background: rgba(24, 27, 36, 0.5);
+  background: var(--color-canvas-bg);
   backdrop-filter: blur(8px);
 }

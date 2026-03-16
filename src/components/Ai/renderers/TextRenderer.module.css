@@ -1,13 +1,13 @@
 .container {
   line-height: 1.7;
-  font-size: 14px;
+  font-size: var(--text-sm);
   word-break: break-word;
-  color: var(--color-text-primary, #e2e8f0);
+  color: var(--color-text-primary);
 }
 
 .paragraph {
   margin: 8px 0;
-  color: var(--color-text-primary, #e2e8f0);
+  color: var(--color-text-primary);
 }
 
 .orderedList {
@@ -22,18 +22,19 @@
 
 .listItem {
   margin: 6px 0;
-  color: var(--color-text-primary, #e2e8f0);
+  color: var(--color-text-primary);
 }
 
 .link {
-  color: rgba(107,158,255,0.9);
-  font-weight: 600;
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
   text-decoration: none;
-  border-bottom: 1px solid rgba(107,158,255,0.3);
-  transition: border-color 0.15s, color 0.15s;
+  font-size: var(--text-sm);
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .link:hover {
-  color: rgba(107,158,255,1);
-  border-color: rgba(107,158,255,0.7);
+  color: var(--color-primary-hover);
+  border-color: var(--color-primary);
 }

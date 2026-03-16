@@ -35,7 +35,7 @@ function ChatBubble({ message }: Props) {
   const handleDownload = async () => {
     console.log("✅ Download clicked", message.type, (message as any).export);
     if (!canExport) return;
-
+const theme = document.documentElement.getAttribute("data-theme") || "dark";
     const baseName =
       message.type === "text"
         ? "response"
@@ -51,11 +51,11 @@ function ChatBubble({ message }: Props) {
     }
     if (preferred === "png") {
       if (!contentRef.current) return;
-      return downloadNodeAsPNG(contentRef.current, `${baseName}.png`);
+      return downloadNodeAsPNG(contentRef.current, `${baseName}.png`, theme);
     }
     // ✅ fallback/default -> PDF of rendered node (works for chart/grid/text/multi)
     if (!contentRef.current) return;
-    return downloadNodeAsPDF(contentRef.current, `${baseName}.pdf`);
+    return downloadNodeAsPDF(contentRef.current, `${baseName}.pdf`, theme);
   };
 
   return (
