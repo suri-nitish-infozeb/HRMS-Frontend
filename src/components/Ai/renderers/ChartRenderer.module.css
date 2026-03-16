@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  background: var(--color-canvas-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-canvas-border);
+  padding: 8px 4px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 640px) {
+  .wrapper { padding: 4px 0; }
+}

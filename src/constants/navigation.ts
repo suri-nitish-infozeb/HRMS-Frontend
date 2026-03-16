@@ -11,6 +11,7 @@ export const ROUTES = {
   RESUME: '/resume',
   UNSAVED_LAYOUT_1: '/unsaved-layout-1',
   UNSAVED_LAYOUT_2: '/unsaved-layout-2',
+  AI_DEVELOPMENT: '/ai-development',
 } as const;
 
 export const SAVED_LAYOUTS: SavedLayout[] = [
@@ -28,5 +29,11 @@ export const MAIN_MENU_ITEMS = [
   { id: 'home', label: 'Home', icon: 'home', path: ROUTES.HOME_STATIC },
   { id: 'teams', label: 'Teams', icon: 'users', path: ROUTES.TEAMS },
   { id: 'settings', label: 'Settings', icon: 'settings', path: ROUTES.SETTINGS },
+  {
+    id: 'ai-development',
+    label: 'AI Development',
+    icon: 'file-text',
+    path: ROUTES.AI_DEVELOPMENT,
+  },
   { id: 'resume', label: 'Resume', icon: 'file-text', path: ROUTES.RESUME },
 ] as const;

@@ -1,0 +1,131 @@
+/* ── Row ─────────────────────────────────────────── */
+.row {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 0 16px;
+}
+
+.rowUser {
+  flex-direction: row-reverse;
+}
+.rowAI {
+  flex-direction: row;
+}
+
+/* ── Avatar ──────────────────────────────────────── */
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  font-weight: var(--font-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+/* ── Bubble ──────────────────────────────────────── */
+.bubble {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  word-break: break-word;
+}
+
+.bubbleWide {
+  max-width: 92%;
+  width: 92%;
+  max-height: 60vh;
+  overflow: auto;
+}
+
+.bubbleUser {
+  background: var(--color-primary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  border-bottom-right-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+}
+
+.bubbleAI {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  border-bottom-left-radius: var(--radius-sm);
+  backdrop-filter: blur(8px);
+}
+
+/* Add internal scroll for big AI outputs (table/chart/grid) */
+.bubbleWide {
+  max-width: 92%;
+  width: 92%;
+  max-height: 60vh; /* ✅ prevents taking full screen */
+  overflow: auto; /* ✅ bubble itself scrolls */
+}
+
+.downloadBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  z-index: 9999;
+  pointer-events: auto;
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+    transition: background 0.15s ease;
+}
+
+.downloadBtn:hover {
+  background: var(--color-button-secondary-bg);
+}
+
+.captureArea {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Timestamp ───────────────────────────────────── */
+.time {
+  display: block;
+  font-size: var(--text-xs);
+  margin-top: 6px;
+  color: var(--color-text-muted);
+}
+
+.timeUser {
+  text-align: right;
+  color: var(--color-button-on-primary);
+}
+
+.timeAI {
+  text-align: left;
+  color: var(--color-chart-line);
+}
+
+/* ── Mobile ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .bubble {
+    max-width: 88%;
+  }
+  .bubbleWide {
+    max-width: 100%;
+    width: 100%;
+  }
+  .row {
+    padding: 0 8px;
+  }
+}

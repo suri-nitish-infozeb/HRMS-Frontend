@@ -1,62 +1,117 @@
-/** Base fields present on all message types */
-interface MessageBase {
-  id?: string;
-  role?: "user" | "assistant";
+export type AIResponseType =
+  | "text"
+  | "table"
+  | "chart"
+  | "links"
+  | "file"
+  | "grid"
+  | "multi";
+
+export type ChartType = "bar" | "line" | "pie" | "donut" | "radar";
+
+export type Role = "user" | "assistant";
+
+export type ExportFormat = "pdf" | "xlsx" | "csv" | "docx" | "png";
+
+export interface BaseMessage {
+  id: string;
+  role: Role;
+  type: AIResponseType;
   timestamp?: string;
 }
 
-export interface TextMessage extends MessageBase {
+// ── Text ─────────────────────────────────────────────────
+export interface TextMessage extends BaseMessage {
   type: "text";
   content: string;
 }
 
-export interface TableMessage extends MessageBase {
+// ── Table ────────────────────────────────────────────────
+export interface TableMessage extends BaseMessage {
   type: "table";
   title?: string;
   columns: string[];
-  rows: Record<string, string>[];
+  rows: Record<string, string | number>[];
 }
 
-export interface ChartMessage extends MessageBase {
+// ── Chart ────────────────────────────────────────────────
+export interface ChartMessage extends BaseMessage {
   type: "chart";
   title?: string;
-  chartType: "bar" | "pie" | "donut" | "line";
+  chartType: ChartType;
   labels: string[];
   values: number[];
+  colors?: string[];
 }
 
-export interface LinksMessage extends MessageBase {
+// ── Links ────────────────────────────────────────────────
+export interface LinksMessage extends BaseMessage {
   type: "links";
   title?: string;
-  items: { label: string; url: string }[];
+  links: {
+    label: string;
+    url: string;
+    description?: string;
+    icon?: string;
+  }[];
 }
 
+// ── File ─────────────────────────────────────────────────
+export interface FileMessage extends BaseMessage {
+  type: "file";
+  fileUrl: string;
+  fileName: string;
+  fileSize?: string;
+  fileType?: string;
+}
+
+// ── Grid ─────────────────────────────────────────────────
 export interface GridCard {
   title: string;
-  value: string;
-  icon?: string;
+  value: string | number;
   subtitle?: string;
-  link?: string;
+  icon?: string;
   trend?: "up" | "down" | "neutral";
   trendValue?: string;
+  color?: string;
+  link?: string;
 }
 
-export interface GridMessage extends MessageBase {
+export interface GridMessage extends BaseMessage {
   type: "grid";
   title?: string;
-  columns?: number;
+  columns?: 2 | 3 | 4;
   cards: GridCard[];
 }
 
-export interface MultiMessage extends MessageBase {
-  type: "multi";
-  blocks: Message[];
-}
-
+// ── Union (declare before MultiMessage uses it) ───────────
 export type Message =
   | TextMessage
   | TableMessage
   | ChartMessage
   | LinksMessage
+  | FileMessage
   | GridMessage
   | MultiMessage;
+
+// ── Multi (multiple blocks) ───────────────────────────────
+export interface MultiMessage extends BaseMessage {
+  type: "multi";
+  title?: string;
+  blocks: Message[];
+}
+
+
+export interface ExportMeta {
+  preferred: ExportFormat;
+  options: ExportFormat[];
+  fileName?: string;
+}
+
+export interface BaseMessage {
+  id: string;
+  role: Role;
+  type: AIResponseType;
+  timestamp?: string;
+  export?: ExportMeta;   // ✅ add this
+}

@@ -22,8 +22,7 @@
 }
 
 /* Dark theme (default) – white as primary surface feel, blue as secondary/accent */
-[data-theme='dark'],
-:root {
+[data-theme='dark']{
   --color-primary: #4266f6;
   --color-primary-hover: #5b7cff;
   --color-primary-light: #282a3a;

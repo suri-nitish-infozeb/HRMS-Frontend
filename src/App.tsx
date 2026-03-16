@@ -6,10 +6,12 @@ import { useAppDispatch, useAppSelector } from './hooks';
 import { setMode } from './store/slices/appSlice';
 import { MainLayout } from './components';
 import HomeAI from './pages/HomeAI';
+import AIDevelopment from './pages/AIDevelopment/AIDevelopment';
 import HomeStatic from './pages/HomeStatic';
 import Placeholder from './pages/Placeholder';
 import ResumeBoardPage from './pages/ResumeBoard';
 import { ROUTES } from './constants';
+
 import './styles/variables.css';
 import './App.css';
 
@@ -34,6 +36,7 @@ function ModeSync() {
     const isAIRoute =
       path === ROUTES.HOME_AI ||
       path === '/' ||
+      path === ROUTES.AI_DEVELOPMENT ||
       path === ROUTES.EMPLOYEE_ATTRITION ||
       path === ROUTES.EMPLOYEE_APPROVALS ||
       path === ROUTES.UNSAVED_LAYOUT_1 ||
@@ -60,6 +63,7 @@ function AppRoutes() {
       <Route path={ROUTES.HOME_STATIC} element={<HomeStatic />} />
       <Route path={ROUTES.TEAMS} element={<Placeholder title="Teams" />} />
       <Route path={ROUTES.SETTINGS} element={<Placeholder title="Settings" />} />
+      <Route path={ROUTES.AI_DEVELOPMENT} element={<AIDevelopment />} />
       <Route path={ROUTES.RESUME} element={<ResumeBoardPage />} />
       <Route path={ROUTES.EMPLOYEE_ATTRITION} element={<Placeholder title="Employee Attrition" />} />
       <Route path={ROUTES.EMPLOYEE_APPROVALS} element={<Placeholder title="Employee Approvals" />} />

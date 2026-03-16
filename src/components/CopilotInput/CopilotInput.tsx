@@ -20,6 +20,7 @@ function CopilotInput({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAsk?.(value);
+    setValue('');
   };
 
   return (
